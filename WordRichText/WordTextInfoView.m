@@ -23,6 +23,10 @@
         //attribute setting
         self.indexView.editable = NO;
         self.meaningView.editable = NO;
+        self.indexView.textAlignment = NSTextAlignmentRight;
+        self.meaningView.textAlignment = NSTextAlignmentLeft;
+        self.indexView.scrollEnabled = NO;
+        self.meaningView.scrollEnabled = NO;
         
         //test code
         self.indexView.text = @"fad";
@@ -32,11 +36,21 @@
 }
 
 - (void)setIndex:(NSInteger)index{
-    
+    self.indexView.text = [NSString stringWithFormat:@"考法%ld",index];
 }
 
 - (void)setMeaning:(NSString *)meaning{
-    
+    self.meaningView.text = meaning;
 }
+
+- (CGFloat)adjustHeight{
+    CGRect oldFrame = self.meaningView.frame;
+    NSLog(@"%@",self.meaningView.text);
+    oldFrame.size.height = self.meaningView.contentSize.height;
+    self.meaningView.frame = oldFrame;
+    return self.meaningView.frame.size.height;
+}
+
+
 
 @end

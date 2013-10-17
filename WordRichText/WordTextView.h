@@ -15,4 +15,11 @@
 @property (nonatomic, strong) WordTextInfoView *textInfoView;
 @property (nonatomic, strong) WordTextDetailView *textDetailView;
 
+- (void)setIndex:(NSInteger)index;
+- (void)setMeaning:(NSString *)meaning;
+- (void)setTitle:(NSString *)title;
+- (void)setDetail:(NSString *)detail;
+
+- (CGFloat)adjustHeight;
+
 @end

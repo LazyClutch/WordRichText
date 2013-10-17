@@ -17,4 +17,6 @@
 - (void)setIndex:(NSInteger)index;
 - (void)setMeaning:(NSString *)meaning;
 
+- (CGFloat)adjustHeight;
+
 @end

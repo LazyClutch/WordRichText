@@ -12,9 +12,11 @@
 @interface WordTextDetailView : UIView
 
 @property (nonatomic, strong) WordRichTextView *titleView;
-@property (nonatomic, strong) WordRichTextView *meaningView;
+@property (nonatomic, strong) WordRichTextView *detailView;
 
 - (void)setTitle:(NSString *)title;
-- (void)setMeaning:(NSString *)meaning;
+- (void)setDetail:(NSString *)detail;
+
+- (CGFloat)adjustHeight;
 
 @end
