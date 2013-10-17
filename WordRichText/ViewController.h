@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WordTextView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

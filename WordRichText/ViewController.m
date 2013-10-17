@@ -17,13 +17,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    //test code
+    self.scrollView.contentSize = CGSizeMake(320,702);
+    int a = 5;
+    while (a--) {
+        WordTextView *textView = [[WordTextView alloc] initWithFrame:CGRectMake(0, (5 - a) * 117, 320, 117)];
+        [self.scrollView addSubview:textView];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    
 }
 
 @end
