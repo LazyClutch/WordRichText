@@ -21,6 +21,10 @@
 		6301053E1810079F0019D536 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630105201810079F0019D536 /* UIKit.framework */; };
 		630105461810079F0019D536 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 630105441810079F0019D536 /* InfoPlist.strings */; };
 		630105481810079F0019D536 /* WordRichTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 630105471810079F0019D536 /* WordRichTextTests.m */; };
+		630105541810094A0019D536 /* WordRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 630105531810094A0019D536 /* WordRichTextView.m */; };
+		63010557181009BD0019D536 /* WordTextInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63010556181009BD0019D536 /* WordTextInfoView.m */; };
+		6301055A18100A110019D536 /* WordTextDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301055918100A110019D536 /* WordTextDetailView.m */; };
+		6301055D18100A270019D536 /* WordTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301055C18100A270019D536 /* WordTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		630105431810079F0019D536 /* WordRichTextTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordRichTextTests-Info.plist"; sourceTree = "<group>"; };
 		630105451810079F0019D536 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		630105471810079F0019D536 /* WordRichTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordRichTextTests.m; sourceTree = "<group>"; };
+		630105521810094A0019D536 /* WordRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordRichTextView.h; sourceTree = "<group>"; };
+		630105531810094A0019D536 /* WordRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordRichTextView.m; sourceTree = "<group>"; };
+		63010555181009BD0019D536 /* WordTextInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTextInfoView.h; sourceTree = "<group>"; };
+		63010556181009BD0019D536 /* WordTextInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTextInfoView.m; sourceTree = "<group>"; };
+		6301055818100A110019D536 /* WordTextDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTextDetailView.h; sourceTree = "<group>"; };
+		6301055918100A110019D536 /* WordTextDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTextDetailView.m; sourceTree = "<group>"; };
+		6301055B18100A270019D536 /* WordTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTextView.h; sourceTree = "<group>"; };
+		6301055C18100A270019D536 /* WordTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 		630105221810079F0019D536 /* WordRichText */ = {
 			isa = PBXGroup;
 			children = (
+				63010551181008BF0019D536 /* WordRichTextView */,
 				6301052B1810079F0019D536 /* AppDelegate.h */,
 				6301052C1810079F0019D536 /* AppDelegate.m */,
 				6301052E1810079F0019D536 /* Main.storyboard */,
@@ -150,6 +163,21 @@
 				630105441810079F0019D536 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63010551181008BF0019D536 /* WordRichTextView */ = {
+			isa = PBXGroup;
+			children = (
+				630105521810094A0019D536 /* WordRichTextView.h */,
+				630105531810094A0019D536 /* WordRichTextView.m */,
+				63010555181009BD0019D536 /* WordTextInfoView.h */,
+				63010556181009BD0019D536 /* WordTextInfoView.m */,
+				6301055818100A110019D536 /* WordTextDetailView.h */,
+				6301055918100A110019D536 /* WordTextDetailView.m */,
+				6301055B18100A270019D536 /* WordTextView.h */,
+				6301055C18100A270019D536 /* WordTextView.m */,
+			);
+			name = WordRichTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6301055A18100A110019D536 /* WordTextDetailView.m in Sources */,
 				630105331810079F0019D536 /* ViewController.m in Sources */,
 				6301052D1810079F0019D536 /* AppDelegate.m in Sources */,
+				6301055D18100A270019D536 /* WordTextView.m in Sources */,
+				63010557181009BD0019D536 /* WordTextInfoView.m in Sources */,
 				630105291810079F0019D536 /* main.m in Sources */,
+				630105541810094A0019D536 /* WordRichTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

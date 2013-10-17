@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WordRichTextView.h
 //  WordRichText
 //
 //  Created by lazy on 13-10-17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@interface WordRichTextView : UITextView
 
 @end
