@@ -26,19 +26,19 @@
 }
 
 - (void)setIndex:(NSInteger)index{
-    self.textInfoView.indexView.text = [NSString stringWithFormat:@"考法%ld",index];
+    [self.textInfoView setIndex:index];
 }
 
 - (void)setMeaning:(NSString *)meaning{
-    self.textInfoView.meaningView.text = meaning;
+    [self.textInfoView setMeaning:meaning];
 }
 
 - (void)setTitle:(NSString *)title{
-    self.textDetailView.titleView.text = title;
+    [self.textDetailView setTitle:title];
 }
 
 - (void)setDetail:(NSString *)detail{
-    self.textDetailView.detailView.text = detail;
+    [self.textDetailView setDetail:detail];
 }
 
 - (CGFloat)adjustHeight{

@@ -11,7 +11,7 @@
 				<key>english</key>
 				<string>carefree, freedom from constraint</string>
 				<key>example</key>
-				<string>added spices to the stew with complete abandon 肆无忌惮地向炖菜里面加调料</string>
+				<string>added spices to the stew with complete &lt;B&gt;abandon&lt;/B&gt; 肆无忌惮地向炖菜里面加调料</string>
 				<key>homoionym</key>
 				<string>unconstraint, uninhibitedness, unrestraint</string>
 				<key>part</key>
@@ -25,7 +25,7 @@
 				<key>english</key>
 				<string>to give (oneself) over unrestrainedly</string>
 				<key>example</key>
-				<string>abandon oneself to emotion 感情用事，abandon herself to a life of complete idleness 放纵自己过着闲散的生活</string>
+				<string>&lt;B&gt;abandon&lt;/B&gt; oneself to emotion 感情用事，&lt;B&gt;abandon&lt;/B&gt; herself to a life of complete idleness 放纵自己过着闲散的生活</string>
 				<key>homoionym</key>
 				<string>indulge, surrender, give up</string>
 				<key>part</key>
@@ -41,7 +41,7 @@
 				<key>english</key>
 				<string>to withdraw from often in the face of danger or encroachment</string>
 				<key>example</key>
-				<string>abandon the ship/homes 弃船，离家</string>
+				<string>&lt;B&gt;abandon&lt;/B&gt; the ship/homes 弃船，离家</string>
 				<key>part</key>
 				<string>v.</string>
 				<key>usage</key>

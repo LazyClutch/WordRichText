@@ -14,7 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-    
+        [self setFont:[UIFont fontWithName:@"Heiti SC" size:12]];
     }
     return self;
 }

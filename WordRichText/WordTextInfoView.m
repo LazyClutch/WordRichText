@@ -46,7 +46,7 @@
 
 - (CGFloat)adjustHeight{
     CGRect oldFrame = self.meaningView.frame;
-    oldFrame.size.height = [self textViewHeightForAttributedText:[[NSAttributedString alloc] initWithString:self.meaningView.text] andWidth:248];
+    oldFrame.size.height = [self textViewHeightForAttributedText:[[NSAttributedString alloc] initWithAttributedString:self.meaningView.attributedText] andWidth:248];
     self.meaningView.frame = oldFrame;
     return self.meaningView.frame.size.height;
 }
