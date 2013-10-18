@@ -25,6 +25,8 @@
 		6347205C18101A8900A7BF7C /* WordTextInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347205B18101A8900A7BF7C /* WordTextInfoView.m */; };
 		6347205F18101A9800A7BF7C /* WordTextDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347205E18101A9800A7BF7C /* WordTextDetailView.m */; };
 		6347206218101AA000A7BF7C /* WordTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347206118101AA000A7BF7C /* WordTextView.m */; };
+		634F66C918116E0A008998B9 /* WordWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F66C718116E0A008998B9 /* WordWebViewController.m */; };
+		634F66CA18116E0A008998B9 /* WordWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634F66C818116E0A008998B9 /* WordWebViewController.xib */; };
 		6391021C1810163B008283F7 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6391021B1810163B008283F7 /* words.plist */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,9 @@
 		6347205E18101A9800A7BF7C /* WordTextDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTextDetailView.m; sourceTree = "<group>"; };
 		6347206018101AA000A7BF7C /* WordTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTextView.h; sourceTree = "<group>"; };
 		6347206118101AA000A7BF7C /* WordTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTextView.m; sourceTree = "<group>"; };
+		634F66C618116E0A008998B9 /* WordWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordWebViewController.h; sourceTree = "<group>"; };
+		634F66C718116E0A008998B9 /* WordWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordWebViewController.m; sourceTree = "<group>"; };
+		634F66C818116E0A008998B9 /* WordWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordWebViewController.xib; sourceTree = "<group>"; };
 		6391021B1810163B008283F7 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +184,9 @@
 				6347205E18101A9800A7BF7C /* WordTextDetailView.m */,
 				6347206018101AA000A7BF7C /* WordTextView.h */,
 				6347206118101AA000A7BF7C /* WordTextView.m */,
+				634F66C618116E0A008998B9 /* WordWebViewController.h */,
+				634F66C718116E0A008998B9 /* WordWebViewController.m */,
+				634F66C818116E0A008998B9 /* WordWebViewController.xib */,
 			);
 			name = WordRichTextView;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 			files = (
 				6391021C1810163B008283F7 /* words.plist in Resources */,
 				630105351810079F0019D536 /* Images.xcassets in Resources */,
+				634F66CA18116E0A008998B9 /* WordWebViewController.xib in Resources */,
 				630105271810079F0019D536 /* InfoPlist.strings in Resources */,
 				630105301810079F0019D536 /* Main.storyboard in Resources */,
 			);
@@ -284,6 +293,7 @@
 				6347205F18101A9800A7BF7C /* WordTextDetailView.m in Sources */,
 				630105331810079F0019D536 /* ViewController.m in Sources */,
 				6301052D1810079F0019D536 /* AppDelegate.m in Sources */,
+				634F66C918116E0A008998B9 /* WordWebViewController.m in Sources */,
 				6347206218101AA000A7BF7C /* WordTextView.m in Sources */,
 				6347205C18101A8900A7BF7C /* WordTextInfoView.m in Sources */,
 				630105291810079F0019D536 /* main.m in Sources */,

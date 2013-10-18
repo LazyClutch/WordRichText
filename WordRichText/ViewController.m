@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WordWebViewController.h"
 #define NOTIFICATION_WORD_TAP @"WordTapped"
 
 @interface ViewController ()
@@ -63,6 +64,10 @@
 - (void)wordTapped:(NSNotification *)notification{
     NSMutableDictionary *dict = (NSMutableDictionary *)[notification userInfo];
     NSString *word = [dict objectForKey:@"word"];
+    WordWebViewController *modalViewController = [[WordWebViewController alloc] init];
+    [self presentViewController:modalViewController animated:YES completion:^{
+        [modalViewController loadWebView:word];
+    }];
     NSLog(@"%@",word);
 }
 
