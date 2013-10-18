@@ -8,6 +8,8 @@
 
 #import "WordTextDetailView.h"
 #define DEFAULT_HEIGHT 35
+#define NOTIFICATION_WORD_TAP @"WordTapped"
+
 
 @implementation WordTextDetailView
 
@@ -61,13 +63,15 @@
 
 #pragma mark-
 #pragma mark Gesture Recognizer Methods
-- (NSString *)wordTapped:(UITapGestureRecognizer *)tap{
+- (void)wordTapped:(UITapGestureRecognizer *)tap{
     CGPoint pos = [tap locationInView:self.detailView];
     pos.y += self.detailView.contentOffset.y;
     UITextPosition *tapPos = [self.detailView closestPositionToPoint:pos];
     UITextRange * wr = [self.detailView.tokenizer rangeEnclosingPosition:tapPos withGranularity:UITextGranularityWord inDirection:UITextLayoutDirectionRight];
     NSString *word = [self.detailView textInRange:wr];
-    return word;
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    [dict setObject:word forKey:@"word"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_WORD_TAP object:self userInfo:dict];
 }
 
 @end

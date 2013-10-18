@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#define NOTIFICATION_WORD_TAP @"WordTapped"
 
 @interface ViewController ()
 
@@ -43,6 +44,8 @@
 
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wordTapped:) name:NOTIFICATION_WORD_TAP object:nil];
+    
     self.scrollView.contentSize = CGSizeMake(320,heightCounter);
 
     
@@ -55,6 +58,12 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     
+}
+
+- (void)wordTapped:(NSNotification *)notification{
+    NSMutableDictionary *dict = (NSMutableDictionary *)[notification userInfo];
+    NSString *word = [dict objectForKey:@"word"];
+    NSLog(@"%@",word);
 }
 
 @end
