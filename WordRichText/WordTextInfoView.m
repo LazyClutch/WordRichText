@@ -20,6 +20,10 @@
         [self addSubview:self.indexView];
         [self addSubview:self.meaningView];
         
+        UIColor *backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"border.png"]];
+        [self.indexView setBackgroundColor:backgroundColor];
+        [self.meaningView setBackgroundColor: backgroundColor];
+        
         //attribute setting
         self.indexView.editable = NO;
         self.meaningView.editable = NO;
@@ -48,6 +52,11 @@
     CGRect oldFrame = self.meaningView.frame;
     oldFrame.size.height = [self textViewHeightForAttributedText:[[NSAttributedString alloc] initWithAttributedString:self.meaningView.attributedText] andWidth:248];
     self.meaningView.frame = oldFrame;
+    
+    CGRect oldLeftFrame = self.indexView.frame;
+    oldLeftFrame.size.height = oldFrame.size.height;
+    self.indexView.frame = oldLeftFrame;
+    
     return self.meaningView.frame.size.height;
 }
 
