@@ -27,7 +27,11 @@
         self.detailView.textAlignment = NSTextAlignmentLeft;
         self.titleView.scrollEnabled = NO;
         self.detailView.scrollEnabled = NO;
-
+        self.titleView.selectable = NO;
+        self.titleView.userInteractionEnabled = NO;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(wordTapped:)];
+        [self.detailView addGestureRecognizer:tap];
     }
     return self;
 }
@@ -52,8 +56,18 @@
     UITextView *calculationView = [[UITextView alloc] init];
     [calculationView setAttributedText:text];
     CGSize size = [calculationView sizeThatFits:CGSizeMake(width, FLT_MAX)];
-    NSLog(@"%f",size.height);
     return size.height;
+}
+
+#pragma mark-
+#pragma mark Gesture Recognizer Methods
+- (NSString *)wordTapped:(UITapGestureRecognizer *)tap{
+    CGPoint pos = [tap locationInView:self.detailView];
+    pos.y += self.detailView.contentOffset.y;
+    UITextPosition *tapPos = [self.detailView closestPositionToPoint:pos];
+    UITextRange * wr = [self.detailView.tokenizer rangeEnclosingPosition:tapPos withGranularity:UITextGranularityWord inDirection:UITextLayoutDirectionRight];
+    NSString *word = [self.detailView textInRange:wr];
+    return word;
 }
 
 @end

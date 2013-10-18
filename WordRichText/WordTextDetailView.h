@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WordRichTextView.h"
 
-@interface WordTextDetailView : UIView
+@interface WordTextDetailView : UIView<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) WordRichTextView *titleView;
 @property (nonatomic, strong) WordRichTextView *detailView;

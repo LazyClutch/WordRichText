@@ -19,7 +19,7 @@
     [super viewDidLoad];
     //test code
     NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
-    NSDictionary *dict = [[[NSArray alloc] initWithContentsOfFile:path] objectAtIndex:549];
+    NSDictionary *dict = [[[NSArray alloc] initWithContentsOfFile:path] objectAtIndex:0];
     NSArray *detail = [dict objectForKey:@"detail"];
     NSInteger heightCounter = 0;
     NSInteger exPointCount = 1;

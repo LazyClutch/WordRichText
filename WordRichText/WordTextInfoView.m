@@ -27,6 +27,10 @@
         self.meaningView.textAlignment = NSTextAlignmentLeft;
         self.indexView.scrollEnabled = NO;
         self.meaningView.scrollEnabled = NO;
+        self.indexView.selectable = NO;
+        self.meaningView.selectable = NO;
+        self.indexView.userInteractionEnabled = NO;
+        self.meaningView.userInteractionEnabled = NO;
 
     }
     return self;
