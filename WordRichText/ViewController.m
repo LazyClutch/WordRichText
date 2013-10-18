@@ -19,26 +19,31 @@
     [super viewDidLoad];
     //test code
     NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
-    NSDictionary *dict = [[[NSArray alloc] initWithContentsOfFile:path] objectAtIndex:0];
+    NSDictionary *dict = [[[NSArray alloc] initWithContentsOfFile:path] objectAtIndex:549];
     NSArray *detail = [dict objectForKey:@"detail"];
     NSInteger heightCounter = 0;
+    NSInteger exPointCount = 1;
     for (NSDictionary *dictDetail in detail) {
         WordTextView *textView = [[WordTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 117)];
         
         NSString *meaning = [dictDetail objectForKey:@"usage"];
         NSString *detailMeaning = [dictDetail objectForKey:@"example"];
-        [textView setIndex:1];
+        
+        [textView setIndex:exPointCount];
         [textView setMeaning:meaning];
         [textView setTitle:@"中"];
         [textView setDetail:detailMeaning];
+        
         CGFloat height = [textView adjustHeight];
         textView.frame = CGRectMake(0, heightCounter, 320, height);
         heightCounter += height;
+        exPointCount++;
+
         [self.scrollView addSubview:textView];
 
     }
     
-    self.scrollView.contentSize = CGSizeMake(320,640);
+    self.scrollView.contentSize = CGSizeMake(320,heightCounter);
 
     
 }

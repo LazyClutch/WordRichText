@@ -27,10 +27,7 @@
         self.meaningView.textAlignment = NSTextAlignmentLeft;
         self.indexView.scrollEnabled = NO;
         self.meaningView.scrollEnabled = NO;
-        
-        //test code
-        self.indexView.text = @"fad";
-        self.meaningView.text = @"fsf";
+
     }
     return self;
 }
@@ -45,12 +42,17 @@
 
 - (CGFloat)adjustHeight{
     CGRect oldFrame = self.meaningView.frame;
-    NSLog(@"%@",self.meaningView.text);
-    oldFrame.size.height = self.meaningView.contentSize.height;
+    oldFrame.size.height = [self textViewHeightForAttributedText:[[NSAttributedString alloc] initWithString:self.meaningView.text] andWidth:248];
     self.meaningView.frame = oldFrame;
     return self.meaningView.frame.size.height;
 }
 
-
+- (CGFloat)textViewHeightForAttributedText:(NSAttributedString*)text andWidth:(CGFloat)width
+{
+    UITextView *calculationView = [[UITextView alloc] init];
+    [calculationView setAttributedText:text];
+    CGSize size = [calculationView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+    return size.height;
+}
 
 @end

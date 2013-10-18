@@ -27,11 +27,7 @@
         self.detailView.textAlignment = NSTextAlignmentLeft;
         self.titleView.scrollEnabled = NO;
         self.detailView.scrollEnabled = NO;
-        
-        
-        //test code
-        self.titleView.text = @"fsf";
-        self.detailView.text = @"dfsf";
+
     }
     return self;
 }
@@ -45,12 +41,19 @@
 }
 
 - (CGFloat)adjustHeight{
-    CGSize size = [self.detailView.text boundingRectWithSize:(CGSize) options:<#(NSStringDrawingOptions)#> attributes:<#(NSDictionary *)#> context:<#(NSStringDrawingContext *)#>];
-    
     CGRect oldFrame = self.detailView.frame;
-    oldFrame.size.height = self.detailView.contentSize.height;
+    oldFrame.size.height = [self textViewHeightForAttributedText:[[NSAttributedString alloc] initWithString:self.detailView.text] andWidth:248];
     self.detailView.frame = oldFrame;
     return self.detailView.frame.size.height;
+}
+
+- (CGFloat)textViewHeightForAttributedText:(NSAttributedString*)text andWidth:(CGFloat)width
+{
+    UITextView *calculationView = [[UITextView alloc] init];
+    [calculationView setAttributedText:text];
+    CGSize size = [calculationView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+    NSLog(@"%f",size.height);
+    return size.height;
 }
 
 @end

@@ -21,9 +21,6 @@
         [self addSubview:self.textInfoView];
         [self addSubview:self.textDetailView];
         
-        //test code
-        self.textInfoView.backgroundColor = [UIColor blueColor];
-        self.textDetailView.backgroundColor = [UIColor redColor];
     }
     return self;
 }
