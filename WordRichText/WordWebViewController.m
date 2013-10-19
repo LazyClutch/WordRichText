@@ -46,4 +46,13 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];
 }
+
+#pragma mark-
+#pragma mark UIWebView Delegate Methods
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:@"连接失败，请检查网络" delegate:self cancelButtonTitle:@"好" otherButtonTitles: nil];
+    [alert show];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

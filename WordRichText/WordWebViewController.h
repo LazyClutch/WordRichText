@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WordWebViewController : UIViewController
+@interface WordWebViewController : UIViewController<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
