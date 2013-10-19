@@ -28,14 +28,8 @@
     for (NSDictionary *dictDetail in detail) {
         WordTextView *textView = [[WordTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 117)];
         
-        NSString *meaning = [dictDetail objectForKey:@"usage"];
-        NSString *detailMeaning = [dictDetail objectForKey:@"example"];
-        
-        [textView setIndex:exPointCount];
-        [textView setMeaning:meaning];
-        [textView setTitle:@"中"];
-        [textView setDetail:detailMeaning];
-        
+        [textView setWordDetail:dictDetail atIndex:exPointCount];
+
         CGFloat height = [textView adjustHeight];
         textView.frame = CGRectMake(0, heightCounter, 320, height);
         heightCounter += height;

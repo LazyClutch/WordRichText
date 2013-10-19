@@ -13,12 +13,10 @@
 @interface WordTextView : UIView
 
 @property (nonatomic, strong) WordTextInfoView *textInfoView;
-@property (nonatomic, strong) WordTextDetailView *textDetailView;
+@property (nonatomic, strong) WordTextDetailView *textEnglishDetailView;
+@property (nonatomic, strong) WordTextDetailView *textChineseDetailView;
 
-- (void)setIndex:(NSInteger)index;
-- (void)setMeaning:(NSString *)meaning;
-- (void)setTitle:(NSString *)title;
-- (void)setDetail:(NSString *)detail;
+- (void)setWordDetail:(NSDictionary *)dict atIndex:(NSInteger)index;
 
 - (CGFloat)adjustHeight;
 

@@ -73,14 +73,11 @@
     while (keyWordRange.location != NSNotFound) {
         // replace highlighted word
         NSString *wildWord = [self.detailView.text substringWithRange:keyWordRange];
-        NSLog(@"%@", wildWord);
         NSString *highlightWord = [wildWord substringWithRange:NSMakeRange(3, keyWordRange.length - 7)];
-        NSLog(@"%@", highlightWord);
         UITextPosition  *beginning = self.detailView.beginningOfDocument;
         UITextPosition  *start = [self.detailView positionFromPosition:beginning offset:keyWordRange.location];
         UITextPosition  *end = [self.detailView positionFromPosition:start offset:keyWordRange.length];
         [self.detailView replaceRange:[self.detailView textRangeFromPosition:start toPosition:end] withText:highlightWord];
-        NSLog(@"%@", self.detailView.text);
         keyWordRange = NSMakeRange(keyWordRange.location, keyWordRange.length - 7);
 
         // extract text
