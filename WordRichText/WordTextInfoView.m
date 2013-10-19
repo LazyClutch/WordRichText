@@ -23,6 +23,7 @@
         UIColor *backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"border.png"]];
         [self.indexView setBackgroundColor:backgroundColor];
         [self.meaningView setBackgroundColor: backgroundColor];
+        [self.indexView setTextColor:[UIColor colorWithRed:0.93 green:0.57 blue:0.24 alpha:1.0]];
         
         //attribute setting
         self.indexView.editable = NO;

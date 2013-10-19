@@ -21,7 +21,7 @@
     [super viewDidLoad];
     //test code
     NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
-    NSDictionary *dict = [[[NSArray alloc] initWithContentsOfFile:path] objectAtIndex:0];
+    NSDictionary *dict = [[[NSArray alloc] initWithContentsOfFile:path] objectAtIndex:1467];
     NSArray *detail = [dict objectForKey:@"detail"];
     NSInteger heightCounter = 0;
     NSInteger exPointCount = 1;
@@ -41,7 +41,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wordTapped:) name:NOTIFICATION_WORD_TAP object:nil];
     
-    self.scrollView.contentSize = CGSizeMake(320,heightCounter);
+    self.scrollView.contentSize = CGSizeMake(320,heightCounter + 60);
 
     
 }
